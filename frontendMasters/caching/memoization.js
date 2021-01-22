@@ -28,8 +28,7 @@ console.log(joinLoop(['s','cr','t'],'e'));
 
 function memoize(cb) {
     const cache = {};
-    return (...args) => {
-        let num = args[0];
+    return (num) => {
         if(num in cache) {
             return cache[num]
         }else{
