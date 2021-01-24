@@ -15,7 +15,6 @@ function mergeSort(arr){
 };
 
 function stitch(left, right) {
- 
     const arr = [];
     while(left.length && right.length){
         if(left[0] < right[0]){
@@ -26,5 +25,6 @@ function stitch(left, right) {
     }
     return arr.concat(left, right)
 };
+
 
 console.log(mergeSort([2,4,3,5,87,34]));
