@@ -22,11 +22,15 @@ class HashTable {
     * @param {string} key - the key associated with the value
     * @return {*} value - the deleted value
     */
-    remove(key) {
-      const index = this._hash(key, this.tableSize);
-      const arrayAtIndex = this._storage[index];
-  
+   remove(key) {
+    const index = this._hash(key, this.tableSize);
+    const arrayAtIndex = this._storage[index];
+    for(let i=0;i<arrayAtIndex.length;i++){
+      if(arrayAtIndex[i][0] === key){
+        arrayAtIndex.splice(0,1)
+      }
     }
+  }
     /*
     * Returns the value associated with a key
     * @param {string} key - the key to search for
